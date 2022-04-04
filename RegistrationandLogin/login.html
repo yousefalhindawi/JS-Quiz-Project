@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>LogIn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="kstyle.css">
+    <!-- js
+    <link rel="stylesheet" href="signin.js"> -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody&display=swap" rel="stylesheet">
+
+<style>
+input:invalid{
+  animation: shake 300ms;
+}
+ 
+@keyframes shake {
+  25%{transform:translate(10px);
+    border: 1px solid red;}
+  50%{transform:translate(-10px);
+    border: 1px solid red;}
+  75%{transform:translate(10px);
+    border: 1px solid red;}
+    100%{border: 1px solid red;}
+
+}
+</style>
+  </head>
+  <body>
+         
+     <nav class="navbar fixed-top navbar-expand-lg ">
+        <a class="navbar-brand" href="../index.html"><img src="images/AKRSYCo-logos_transparent.png" width="150px " alt=""></a> 
+        
+      
+         
+          <ul class="navbar-nav mr-auto">
+            
+            
+            
+           
+        </div>
+      </nav> 
+     
+      <div class="main">
+
+
+ 
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign In</h2>
+                        <form  method="" class="register-form" id="register-form">
+                             
+                            <div class="form-group">
+                                <label for="email">  </label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                                <div class="validate"> </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">  </label>
+                                <input type="password" class="form-control" name="pass" id="pass" placeholder="Password"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+                                <div class="validate"> </div>
+                            </div>
+                             
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" onclick="lsRememberMe()" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <a href="#" id="btn" class="btn form-submit">Submit</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/196.png" alt="sing up image"  ></figure>
+                        <a href="Registeration.html" class="signup-image-link">Create an account</a>
+                         
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        </div>
+      
+<script>
+    let Email = document.getElementById('email');
+        let Password = document.getElementById('pass');
+        let btn = document.getElementById('btn');
+       
+        let validate = document.querySelectorAll('.validate');
+
+        btn.addEventListener('click', (e) => {
+            let currentemail = Email.value;
+            let currentpassword = Password.value;
+       
+           
+            
+            if(currentemail === localStorage.getItem('email') && currentpassword === localStorage.getItem('pw')){
+                //location.href = "";
+                 document.getElementById('btn').setAttribute("href","../WelcomePage/Welcome-Page.html");
+              
+                
+            }else if (currentemail != localStorage.getItem('email')){
+                validate[0].innerHTML="  Email is incorrect"
+                document.getElementById("register-form").reset();
+            }
+            else{
+                validate[1].innerText = 'Password is incorrect';
+                document.getElementById("register-form").reset();
+            }
+            localStorage.setItem("allWrong","[1]");//wrong answers array
+            
+        });
+        
+let rememberMe=document.getElementById("remember-me");
+
+
+function lsRememberMe() {
+  if (rememberMe.checked && Email.value !== "") {
+    localStorage.email = Email.value;
+    localStorage.checkbox = rememberMe.value;
+    localStorage.setItem("allWrong","[1]");//wrong answers array
+  } else {
+    sessionStorage.email = Email.value;
+    sessionStorage.checkbox = rememberMe.value;
+    localStorage.setItem("allWrong","[1]");//wrong answers array
+  }
+}
+
+
+</script>
+ 
+  </body>
+</html>

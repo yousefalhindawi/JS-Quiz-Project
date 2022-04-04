@@ -1,0 +1,51 @@
+{
+        "path1":{"questions":[
+            "What number is one quarter of one tenth of one fifth of 200?",
+            "If you rearrange the letters of (ahret) you would have the name of a:",
+            "3, 7, 13, 21, 31. What number comes next in the sequence?",
+            "Compare and contrast or classification problems are commonly used to measure intelligence. Which of the five is least like the other four?",
+            "A, B, D, G, K. Which letter comes next in the sequence?"]
+        },"path1Answers":[
+            ["0.25","0.5","1","10"],
+            ["Ventricle","Fish","River","Planet"],
+            ["43","37","45","39"],
+            ["Turtle","Dolphin","Shark","Eel"],
+            ["N","P","O","M"]
+        ],
+        "path2":{"questions":[
+            "Thomas White, who orchestrated ____ rescue packages, will address the group.",
+            " She always gets up early ____ the morning, so she can make it to class ___ time.",
+            " Usually, I (work) _____ as a secretary at ABT, but this summer I (study) ____ French at a language school in Paris. That is why I am in Paris.",
+            " The thought of eating a rat is abhorrent to most people.",
+            "the work of cleaning and running a house."]
+        },"path2Answers":[
+            ["Multi billion-dollars","Multi billions dollars","Multi billion-dollar","Multi billion dollar"],
+            ["By ---- in","In ---- in","In ---- on","on --- on"],
+            ["Work--- am studying","I am working --- was studying","Am working","Worked --- studied"],
+            ["Delicious, tasty","Sweet, sugary","Fun, lively","Horrible, repugnant"],
+            ["Novelist","Shopping","Cooking","Housekeeping"]
+        ],
+        "path3":{"questions":[
+            "What does CSS stand for?",
+            "Which HTML tag is used to define an internal style sheet? ",
+            "How do you insert a comment in a CSS file?",
+            "What does HTML stand for?",
+            "Who is making the Web standards?",
+            "Which of the following is a server-side Java Script object?",
+            "To insert a JavaScript into an HTML page, which tag is used?",
+            "Which of the following is used to declare a constant?",
+            "What does PHP stand for?",
+            "Which of the following command is used to create react-js-app?"]
+        },"path3Answers":[
+            ["Colorful style sheets","Creative style sheets","Computer style sheets","Cascading style sheets"],
+            ["&lt;script&gt;","&lt;style&gt;","&lt;CSS&gt;","&lt;color&gt;"],
+            ["/c/comment/c/","&lt;!--comment-->","//comment //","/*comment*/"],
+            ["Hyper text markup language","Hyper technology markup language","Home tool markup language","Hyperlinks tools marketing language"],
+            ["Google","Chrome","Firefox","The world wide web consortium"],
+            ["Function","File","FileUpload","Date"],
+            ["&lt;script src=' '&gt;","< javascript>","&lt;script&gt;","< js>"],
+            ["const","constant","define","#pragma"],
+            ["Preprocessed Hypertext Page","Hypertext Markup Language","Hypertext Preprocessor","Hypertext Transfer Protocol"],
+            ["npx create-react-app appname","npm install -g create-react-app","npx install create-react-app -g","install - l create-react-app"]
+        ]
+}

@@ -1,1 +1,1 @@
-# JS-Quiz-Project
+# Group1-Quiz-Project
